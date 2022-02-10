@@ -1,0 +1,42 @@
+## Aula 6: Join no SQL ##
+
+** Chave Primária: Coluna que identifica as informações distintas em uma tabela. 
+- Geralmente é uma coluna de ID,toda tabela tem uma e somente uma. 
+- Essa chave é utilizada como identificador único da tabela, sendo representada por uma coluna que não receberá valores repetidos.
+
+** Chave Estrangeira: Coluna que permite relacionar linhas de uma segunda tabela com a Chave Primária de uma primeira tabela.
+
+** Tabela Dimensão: Tabela que contém características de um determinado elemento: lojas, produtos, funcionários, clientes, etc. 
+- Nenhum dos elementos principais se repetem.
+- É onde encontraremos a chave primária.
+
+** Tabela Fato: Tabela que registra fatos ou acontecimentos de uma empresa/negócio em determinado período de tempo. (vendas, devoluções, despesas, receitas, etc)
+- Geramente tem milhares de informações e é composta essencialmente por colunas ID usadas para buscas inf. complementares de uma tabela dimensão (chave estrangeira).
+
+-- Joins: Juntar ou unir, permite juntar tabelas Fato e Dimensão, de forma a complementar as informações uma da outra.
+
+- Left Join
+- Right Join
+- Inner Join --> curso
+- Full Join
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Inner Join: Permite relacionar duas tabelas e criar uma nova que é a junção das outras duas; 
+	- A tabela resultante terá apenas as linhas que são a interseção entre a tabela 1 e 2.
+
+- Código 1: 
+
+select
+	Tabela_A.coluna1,
+	Tabela_A.coluna2,
+ 	Tabela_A.coluna3,
+	Tabela_B.coluna4,
+from
+	Tabela_A
+inner join Tabela_B
+	on Tabela_A.id_chave_estrangeira = Tabela_B.id_chave_primaria
+ 
+
+ 
+ 
+ 
