@@ -1,0 +1,40 @@
+## Aula SELECT ##
+Select from
+Select limit
+Select as
+Order by
+**SEMPRE USAR ; NO FINAL DO SELECT
+------------------------------------------------------------------------------------------
+ - Código 1 : Selecionar todas as linhas e colunas da tabela especifica. 
+Todas as colunas e linhas = *
+select *
+FROM Tabela;
+
+ - Código 2: Especificar colunas;
+select nomeColuna1, nomeColuna2
+FROM Tabela;
+
+ - Código 3: Selecionar colunas específicas e dar um nome à elas;
+select 
+	nomeColuna1 as "nomenovo",
+	nomeColuna2 as "nomenovo2"
+FROM Tabela;
+
+ - Código 4: Seleciona linhas especificas;
+select *
+FROM Tabela
+limit numerodelinhas;
+
+ - Código 5: Permite selecionar a tabela ordenando as informações a partir de uma coluna.Ascendente.
+select *
+FROM Tabela
+order by nomecoluna;
+
+- Código 6: Permite selecionar a tabela ordenando as informações a partir de uma coluna.Descendente.
+select *
+FROM Tabela
+order by nomecoluna desc;
+
+	
+
+
