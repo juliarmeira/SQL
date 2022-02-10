@@ -1,0 +1,66 @@
+## Aula 4: Funções de Agregação ##
+
+- Count/count*/distinct;
+- Sum;
+- AVG;
+- Min/Max.
+----------------------------------------------------------------------------------------------
+Permitem calculos no SQL, contagem, soma, média, mínimo e máximo.
+
+   -- Count: Retorna a quantidade total de valores de uma coluna. 
+* Ignora valores nulos da tabela.
+
+- Código 1: 
+select
+	count(Nomedacoluna)
+from Tabela;
+
+- Código 2: Conta a quantidade total de linhas.
+select
+	count(*)
+from Tabela;
+
+- Código 3: Calcula quantos valores distintos da coluna.
+select
+	count(distinct Nomedacoluna)
+from Tabela;
+
+    -- Sum: Soma.
+
+- Código 4: 
+select
+	sum (Nomedacoluna)
+from Tabela;
+
+   -- AVG: Média.
+
+- Código 5: 
+select
+	AVG (Nomedacoluna)
+from Tabela;
+
+   -- Min: Retorna valor mínimo da coluna.
+
+- Código 6: 
+select
+	min (Nomedacoluna)
+from Tabela;
+
+   -- Max: Retorna o valor máximo de uma coluna.
+
+- Código 7: 
+select
+	max (Nomedacoluna)
+from Tabela;
+
+
+
+
+
+
+
+
+
+
+
+from Tabela;
