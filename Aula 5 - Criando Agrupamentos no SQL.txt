@@ -1,0 +1,39 @@
+## Aula 5: Criando Agrupamentos no SQL ##
+
+Group By: Permite criar agrupamentos, ou seja, tabelas resumos das tabelas principais.
+
+- Código 1: Criar uma consulta e descobrir o total de clientes por sexo.
+
+select
+	nomecoluna,
+	count(*) as 'Qtd. Clientes'
+from Tabela
+group by nomecoluna;
+
+- Código 2: Criar uma consulta e descobrir o total de clientes por sexo.
+
+select
+	nomecoluna,
+	count(*) as 'Qtd. Clientes'
+from Tabela
+group by nomecoluna;
+
+- Código 2: Consulta à tabela de produtos para retornar o total de produtos por marca.
+
+select
+select 
+	Marca_Produto,
+	count(*) as 'Marcas'
+from produtos
+group by Marca_Produto;
+
+- Código 3: Consulta à tabela pedidos e descubra a receita toral e custo total por id_loja.
+
+select
+	ID_Loja,
+    SUM(Receita_Venda) as 'Receita Total',
+    SUM(Custo_Venda) as 'Custo Total'    
+from pedidos
+group by ID_Loja;
+
+
